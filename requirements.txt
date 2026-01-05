@@ -1,0 +1,48 @@
+# Core Dependencies
+python-dotenv
+
+# LangChain Core
+langchain
+langchain-core
+langchain-community
+
+# LLM Providers
+langchain-openai
+langchain-huggingface
+langchain-anthropic
+
+# Hugging Face & Models
+transformers
+huggingface-hub
+torch
+
+# Vector Stores
+faiss-cpu
+
+# Document Processing
+PyPDF2
+python-docx
+pypdf
+
+# NLP & ML
+spacy
+scikit-learn
+
+# Data Processing & Visualization
+numpy
+pandas
+plotly
+
+# API Framework
+fastapi
+uvicorn
+langserve[all]
+sse-starlette
+
+# UI Framework
+streamlit
+
+# Utilities
+pydantic
+requests
+beautifulsoup4
