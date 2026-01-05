@@ -60,49 +60,6 @@ hrms-ai-resume-screening/
 └── README.md                      # Project documentation
 ```
 
----
-
-## 🚀 Quick Start
-
-### 📋 Prerequisites
-
-- Python 3.8 or higher
-- Groq API Key ([Get it here](https://console.groq.com/))
-
-### 🔧 Installation
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/hrms-ai-resume-screening.git
-cd hrms-ai-resume-screening
-```
-
-2. **Create virtual environment**
-```bash
-python -m venv venv
-
-# Windows
-venv\Scripts\activate
-
-# Mac/Linux
-source venv/bin/activate
-```
-
-3. **Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-4. **Setup environment variables**
-
-Create a `.env` file in the root directory:
-
-```env
-GROQ_API_KEY=your_groq_api_key_here
-```
-
----
-
 ## 🎮 Usage
 
 ### Option 1: Streamlit UI (Recommended)
@@ -349,3 +306,4 @@ If you have any questions or need help, please:
 Made with ❤️ by [Your Name]
 
 </div>
+
