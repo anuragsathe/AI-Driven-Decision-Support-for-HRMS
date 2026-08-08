@@ -1,5 +1,5 @@
 """
-models/chatbot_model_loader.py
+core/llm/chatbot_llm.py
 Groq Llama 3.3 70B for Chatbot
 """
 
@@ -11,7 +11,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 
 # Load environment variables
-load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
 
 # Disable warnings
 warnings.filterwarnings("ignore")

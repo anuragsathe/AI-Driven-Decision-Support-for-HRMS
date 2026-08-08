@@ -1,14 +1,14 @@
 """
-models/model_loader.py
+core/llm/screening_llm.py
 Hugging Face LLM for Resume Screening
 """
 
 import os
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 
-# Load environment variables from models/.env
-load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+# Load environment variables from the root .env
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
 
 # Global model instance
 _llm_instance = None
@@ -21,16 +21,15 @@ def get_llm():
     global _llm_instance
     
     if _llm_instance is None:
-        print("🔄 Loading Llama 3.1 model for resume screening...")
+        print("🔄 Loading Llama 3.1 model for resume screening (via Groq)...")
         
-        api_key = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+        api_key = os.getenv("GROQ_API_KEY")
         
         if not api_key:
-            raise ValueError("❌ HUGGINGFACEHUB_API_TOKEN not found in .env file!")
+            raise ValueError("❌ GROQ_API_KEY not found in .env file!")
         
-        _llm_instance = ChatOpenAI(
-            model="meta-llama/Llama-3.1-8B-Instruct",
-            base_url="https://router.huggingface.co/v1",
+        _llm_instance = ChatGroq(
+            model="llama-3.1-8b-instant",
             api_key=api_key,
             temperature=0.7,
             max_tokens=500

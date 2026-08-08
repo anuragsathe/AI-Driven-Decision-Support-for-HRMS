@@ -1,5 +1,5 @@
 """
-modules/resume_chatbot.py
+services/chat_assistant.py
 Chatbot Logic with Groq
 """
 
@@ -9,7 +9,7 @@ import os
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from models.chatbot_model_loader import invoke_chatbot
+from core.llm.chatbot_llm import invoke_chatbot
 
 
 def get_suggested_questions():

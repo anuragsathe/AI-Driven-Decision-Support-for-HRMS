@@ -43,13 +43,14 @@ AI-Driven-Decision-Support-for-HRMS/
 │   └── main.py                    # FastAPI server & route handlers
 ├── frontend/
 │   └── app.py                     # Streamlit User Interface
-├── modules/
-│   ├── resume_screening.py        # Core ATS screening logic and orchestration
-│   └── resume_chatbot.py          # Chatbot logic and prompt formulations
-├── models/
-│   ├── model_loader.py            # Hugging Face LLM initialization (Screening)
-│   ├── chatbot_model_loader.py    # Groq LLM initialization (Chatbot)
-│   └── .env                       # Environment variables config
+├── services/
+│   ├── resume_scanner.py          # Core ATS screening logic and orchestration
+│   └── chat_assistant.py          # Chatbot logic and prompt formulations
+├── core/
+│   └── llm/
+│       ├── screening_llm.py       # Hugging Face LLM initialization (Screening)
+│       └── chatbot_llm.py         # Groq LLM initialization (Chatbot)
+├── .env                           # Environment variables config (create this)
 ├── requirements.txt               # Dependencies required for both APIs and Frontend
 └── README.md                      # Project documentation
 ```
@@ -81,7 +82,7 @@ AI-Driven-Decision-Support-for-HRMS/
    *(Note: Depending on your environment, you may also need to install `langchain-groq` separately if missing: `pip install langchain-groq`)*
 
 ### 3️⃣ Environment Variable Setup
-Create a `.env` file within the `models/` directory, and define the credentials:
+Create a `.env` file at the root of the project directory (you can copy `.env.example`), and define the credentials:
 ```env
 HUGGINGFACEHUB_API_TOKEN="your_huggingface_token_here"
 GROQ_API_KEY="your_groq_api_key_here"

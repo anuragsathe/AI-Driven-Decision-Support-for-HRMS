@@ -1,5 +1,5 @@
 """
-modules/resume_screening.py
+services/resume_scanner.py
 Resume Screening Logic
 """
 
@@ -12,7 +12,7 @@ import os
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from models.model_loader import invoke_llm
+from core.llm.screening_llm import invoke_llm
 
 
 def extract_text_from_pdf(pdf_file):

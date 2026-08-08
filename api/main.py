@@ -12,8 +12,8 @@ import os
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from modules.resume_screening import screen_multiple_resumes
-from modules.resume_chatbot import get_chatbot_response, get_suggested_questions
+from services.resume_scanner import screen_multiple_resumes
+from services.chat_assistant import get_chatbot_response, get_suggested_questions
 
 # Initialize FastAPI app
 app = FastAPI(
